@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useState } from "react";
@@ -63,7 +65,7 @@ const TeamMemberCard = ({ member, index }: { member: any; index: number }) => {
           transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
         >
           <div className="space-y-4">
-            <p className="text-[#A0A0A0] text-xs leading-relaxed line-clamp-3 italic">
+            <p className="text-[#A0A0A0] text-xs leading-relaxed line-clamp-3 ">
               {member.details || "Crafting digital excellence through minimalist design and robust engineering."}"
             </p>
             
