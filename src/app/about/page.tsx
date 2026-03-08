@@ -1,74 +1,94 @@
 "use client";
 
-import { team, companyData } from "@/data/content";
-import ParallaxSection from "@/components/ParallaxSection";
-import AnimatedText from "@/components/AnimatedText";
+import { team } from "@/data/content";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <>
-      <ParallaxSection className="pt-40 pb-20 bg-[#0A0A0A] min-h-[60vh] flex items-center" speed={0.4}>
-        <div className="container mx-auto px-6 md:px-12 text-center">
-          <AnimatedText as="h1" className="text-5xl md:text-8xl font-serif text-[#F8F8F8] mb-6">
-            Our <span className="text-[#D4AF37] italic">Story</span>
-          </AnimatedText>
-          <AnimatedText delay={0.2} as="p" className="max-w-2xl mx-auto text-[#A0A0A0] text-lg">
-            A collective of engineers, designers, and strategists obsessed with perfection.
-          </AnimatedText>
+    <section className="py-32 bg-[#0A0A0A]">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="text-center mb-24">
+          <h2 className="text-[#D4AF37] tracking-[0.3em] text-xs uppercase mb-4">The Collective</h2>
+          <h3 className="text-5xl md:text-6xl font-serif text-[#F8F8F8]">Leadership</h3>
         </div>
-      </ParallaxSection>
 
-      <section className="py-24 bg-[#141414] border-t border-white/5">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1 aspect-[3/4] bg-[#0A0A0A] border border-white/5 relative group overflow-hidden">
-               {/* <div className="absolute inset-0 bg-[#D4AF37]/5 group-hover:bg-transparent transition-colors duration-700"></div>
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[#333] tracking-widest -rotate-90">STUDIO PLACEHOLDER</div> */}
-               <Image src='/about-us/about.jpg' alt="About Us" fill />
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-[#D4AF37] tracking-widest text-sm uppercase mb-4">The Vision</h2>
-              <AnimatedText as="h3" className="text-4xl md:text-5xl font-serif text-[#F8F8F8] mb-8 leading-tight">
-                Defying convention through <span className="italic text-[#A0A0A0]">relentless innovation.</span>
-              </AnimatedText>
-              <div className="space-y-6 text-[#A0A0A0] leading-relaxed text-sm md:text-base">
-                <p>
-                  Founded on a simple principle: software shouldn't just work, it should feel inevitable. We started {companyData.name} not just to write code, but to architect experiences that users innately understand and appreciate.
-                </p>
-                <p>
-                  Every line of code and every pixel is placed with intent. We don't believe in minimum viable products; we believe in minimal lovable products.
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {team.map((member, i) => (
+            <motion.div
+              key={i}
+              className="group relative cursor-pointer"
+              initial="initial"
+              whileHover="hover"
+            >
+              {/* Image Container */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#141414]">
+                <motion.div
+                  className="absolute inset-0"
+                  variants={{
+                    initial: { y: 0, scale: 1 },
+                    hover: { y: "-15%", scale: 0.9 } // Image moves up and shrinks slightly
+                  }}
+                  transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Subtle color overlay that fades in */}
+                  <motion.div 
+                    className="absolute inset-0 bg-[#D4AF37]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
+                  />
+                </motion.div>
+
+                {/* Details Section (Slides in from bottom) */}
+                <motion.div
+                  className="absolute inset-x-0 bottom-0 p-6 bg-[#0A0A0A] flex flex-col justify-end"
+                  variants={{
+                    initial: { y: "100%" },
+                    hover: { y: 0 }
+                  }}
+                  transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
+                >
+                  <div className="space-y-4">
+                    <p className="text-[#A0A0A0] text-xs leading-relaxed line-clamp-3">
+                      {member.details || "Bringing a unique perspective to digital craftsmanship through years of obsessive attention to detail."}
+                    </p>
+                    
+                    <div className="flex gap-4 border-t border-white/10 pt-4">
+                      <span className="text-[10px] uppercase tracking-widest text-[#D4AF37]">LinkedIn</span>
+                      <span className="text-[10px] uppercase tracking-widest text-[#F8F8F8]/40">— Portfolio</span>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-32 bg-[#0A0A0A]">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center mb-20">
-             <h2 className="text-[#D4AF37] tracking-widest text-sm uppercase mb-4">Leadership</h2>
-             <AnimatedText as="h3" className="text-4xl md:text-5xl font-serif text-[#F8F8F8]">
-               The Team
-             </AnimatedText>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {team.map((member, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-[3/4] bg-[#141414] border border-white/5 mb-6 relative overflow-hidden">
-                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">   <Image src={member.image} alt={member.name} fill className="object-cover" /></div>
-                   <div className="absolute bottom-4 left-4 font-serif text-4xl text-[#333] opacity-20">{i + 1}</div>
-                
+              {/* Title Section (Outside the overflow-hidden container) */}
+              <div className="mt-6 flex justify-between items-start">
+                <div>
+                  <motion.h4 
+                    className="text-2xl font-serif text-[#F8F8F8]"
+                    variants={{
+                      initial: { x: 0 },
+                      hover: { x: 10, color: "#D4AF37" }
+                    }}
+                  >
+                    {member.name}
+                  </motion.h4>
+                  <p className="text-[#555] text-xs uppercase tracking-widest mt-1 group-hover:text-[#A0A0A0] transition-colors">
+                    {member.role}
+                  </p>
                 </div>
-                <h4 className="text-xl font-serif text-[#F8F8F8] mb-2 group-hover:text-[#D4AF37] transition-colors">{member.name}</h4>
-                <p className="text-[#A0A0A0] text-sm">{member.role}</p>
+                <span className="text-serif italic text-white/5 group-hover:text-[#D4AF37]/20 transition-colors text-4xl">
+                  {i + 1}
+                </span>
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

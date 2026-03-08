@@ -76,46 +76,61 @@ export const team = [
   {
     name: "Omer Faruq",
     role: "Founder & CTO",
-    image: "/our-team/omer.jpeg"
+    image: "/our-team/omer.jpeg",
+    details: "Leads the company’s technology vision, architecture, and engineering strategy. Oversees product development and ensures high-quality scalable software solutions."
   },
   {
     name: "Muhammad Mosleh Uddin",
-    role: "Co-founder & Head of Business Development",
-    image: "/our-team/mosleh.jpeg"
+    role: "Co-Founder & Head of Business Development",
+    image: "/our-team/raihan.jpeg",
+    details: "Responsible for client relationships, partnerships, and business growth. Identifies new market opportunities and drives company expansion."
   },
   {
     name: "Mohammad Thowfiqul Hasan",
-    role: "Co-founder & Head of Marketing",
-    image: "/our-team/thowfiq.jpeg"
-  },
-   {
-    name: "Toufiq Jamal",
-    role: "Co-founder & Head of Operations",
-    image: "/our-team/toufiq.jpeg"
-  },
-    {
-    name: "Sayed Sadman",
-    role: "Head of Data Engineering",
-    image: "/our-team/sadman.jpeg"
+    role: "Co-Founder & Head of Marketing",
+    image: "/our-team/thowfiq.jpeg",
+    details: "Leads the marketing strategy, brand positioning, and digital campaigns to grow the company’s presence and attract new clients."
   },
   {
-    name: "Nahidul Islam",
+    name: "Toufiq Jamal",
+    role: "Co-Founder & Head of Operations",
+    image: "/our-team/toufiq.jpeg",
+    details: "Oversees day-to-day operations, internal processes, and project coordination to ensure smooth execution across teams."
+  },
+  {
+    name: "Sayed Sadman",
+    role: "Head of Data Engineering",
+    image: "/our-team/sadman.jpeg",
+    details: "Leads the data engineering initiatives, building scalable data pipelines and analytics infrastructure to support data-driven decision making."
+  },
+  {
+    name: "Rashedul Islam Anik",
     role: "Lead Software Engineer",
-    image: "/our-team/nahidul.jpeg"
+    image: "/our-team/anik.jpeg",
+    details: "Leads the development team and contributes to designing and implementing robust backend and frontend software solutions."
+  },
+  {
+    name: "Maruf Hosain Riyaz",
+    role: "Senior DevOps Engineer",
+    image: "/our-team/maruf.jpeg",
+    details: "Manages cloud infrastructure, CI/CD pipelines, and deployment automation to ensure reliable and scalable systems."
   },
   {
     name: "Sadia Sultana",
     role: "Senior UI/UX Designer",
-    image: "/our-team/sadia.jpeg"
-  },
-   {
-    name: "Rashedul Islam Anik",
-    role: "Senior Devops Engineer",
-    image: "/our-team/anik.jpeg"
+    image: "/our-team/sadia.jpeg",
+    details: "Designs intuitive and visually engaging user experiences, focusing on usability, accessibility, and modern interface design."
   },
   {
     name: "Ferduse Hasan",
     role: "Mobile Lead",
-    image: "/our-team/ferduse.jpeg"  
+    image: "/our-team/ferduse.png",
+    details: "Leads mobile application development, creating high-performance and user-friendly mobile solutions."
+  },
+  {
+    name: "Nahid Ulla Joy",
+    role: "Software Engineer",
+    image: "/our-team/mehdi.jpeg",
+    details: "Works on developing and maintaining web applications, contributing to both frontend and backend features."
   }
 ];
