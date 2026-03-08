@@ -75,23 +75,28 @@ export const portfolio = [
 export const team = [
   {
     name: "Omer Faruq",
-    role: "Founder & Technical Director",
+    role: "Founder & CTO",
     image: "/our-team/omer.jpeg"
   },
   {
-    name: "Mosleh Uddin",
+    name: "Muhammad Mosleh Uddin",
     role: "Co-founder & Head of Business Development",
     image: "/our-team/mosleh.jpeg"
   },
   {
-    name: "Mohammad Thowfiqul hasan",
+    name: "Mohammad Thowfiqul Hasan",
     role: "Co-founder & Head of Marketing",
     image: "/our-team/thowfiq.jpeg"
   },
    {
-    name: "Toufiq Jaman",
+    name: "Toufiq Jamal",
     role: "Co-founder & Head of Operations",
     image: "/our-team/toufiq.jpeg"
+  },
+    {
+    name: "Sayed Sadman",
+    role: "Head of Data Engineering",
+    image: "/our-team/sadman.jpeg"
   },
   {
     name: "Nahidul Islam",
@@ -106,12 +111,7 @@ export const team = [
    {
     name: "Rashedul Islam Anik",
     role: "Senior Devops Engineer",
-    image: "/our-team/rashedul.jpeg"
-  },
-  {
-    name: "Mehdi Iqbal",
-    role: "Cloud Architect",
-    image: "/our-team/mehdi.jpeg"
+    image: "/our-team/anik.jpeg"
   },
   {
     name: "Ferduse Hasan",

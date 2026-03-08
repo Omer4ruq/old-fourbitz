@@ -38,8 +38,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-serif text-[#F8F8F8] tracking-wider relative group">
-          fourBitz
+        <Link href="/" className="text-2xl font-serif text-[#F8F8F8] tracking-wider relative group  border-r-0 border-t-0 border-transparent hover:border-[#D4AF37] transition-colors">
+          four<span className="text-[#D4AF37]">Bitz</span>
           <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
         </Link>
 

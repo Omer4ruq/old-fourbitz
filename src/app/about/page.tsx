@@ -54,7 +54,7 @@ export default function AboutPage() {
              </AnimatedText>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {team.map((member, i) => (
               <div key={i} className="group cursor-pointer">
                 <div className="aspect-[3/4] bg-[#141414] border border-white/5 mb-6 relative overflow-hidden">
