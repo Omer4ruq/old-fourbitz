@@ -82,7 +82,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <span className="text-serif italic text-white/5 group-hover:text-[#D4AF37]/20 transition-colors text-4xl">
-                  {i + 1}
+                  {/* {i + 1} */}
                 </span>
               </div>
             </motion.div>
