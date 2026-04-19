@@ -113,7 +113,7 @@ export default function Home() {
           <div className="flex justify-between items-end mb-16">
             <div>
               <span className="text-[#D4AF37] tracking-widest text-sm uppercase mb-4 block">Our Expertise</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-[#F8F8F8]">Services & Capabilities</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-[#F8F8F8]">Services & Capabilities and many mnore</h2>
             </div>
             <Button href="/services" variant="outline" className="hidden md:flex">View All Services</Button>
           </div>
