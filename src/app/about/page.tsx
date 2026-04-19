@@ -9,6 +9,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 export default function AboutPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [activeMember, setActiveMember] = useState<number | null>(null);
 
   // 1. Scroll-based "Diving" Logic
   const { scrollYProgress } = useScroll({
